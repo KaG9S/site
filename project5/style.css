@@ -1,0 +1,61 @@
+html{
+    background-color: lightseagreen;
+}
+
+p{
+    color: yellow;
+    font-family: "Rubik Moonrocks", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 90px;
+    text-shadow: 5px 5px darkgoldenrod;
+}
+
+ul,ol{
+    font-size: 50px;
+    color: greenyellow;
+    margin-left: 50px;
+}
+
+.l1 li{
+    padding: 10px;
+}
+.l2{
+    list-style-type: '\2192';
+}
+.l2 li::marker{
+    color: blue;
+}
+.l3{
+    list-style-type: '✔';
+}
+.l3 li::marker{
+    color: cadetblue;
+}
+.l4{
+    list-style-type: armenian;
+}
+.l6{
+    list-style-type: '\2192';
+}
+@counter-style emoji{
+    system: cyclic;
+    symbols: 😀 👻 👽 👾 🤖 🎃 😹 👋 👀 💋;
+    suffix: " ";
+}
+.l7{
+    list-style: emoji;
+}
+
+@counter-style lower-ukrainian-full {
+    system: alphabetic;
+    symbols: 'а' 'б' 'в' 'г' 'ґ' 'д' 'е' 'є' 'ж' 'з' 'и' 'і' 'ї' 'й' 'к' 'л' 'м' 'н' 'о' 'п' 'р' 'с' 'т' 'у' 'ф' 'х' 'ц' 'ч' 'ш' 'щ' 'ь' 'ю' 'я';
+    suffix: ') ';
+}
+.l8{
+    list-style: lower-ukrainian-full;
+}
+.l9{
+    list-style-image: url(hand.jpg);
+}
+    

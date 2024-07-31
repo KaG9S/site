@@ -1,0 +1,43 @@
+html{
+    background-color: ivory;
+}
+p{
+    background-color: mediumblue;
+    color: burlywood;
+    font-size: 50px;
+    width: 80%;
+    margin: auto;
+    margin-top: 10px;
+}
+span{
+    border: dashed 5px green;
+    display: block;
+}
+ul{
+    background-color: blueviolet;
+    margin-top: 10px;
+}
+li{
+    background-color: yellow;
+    color: black;
+    list-style-type: none;
+    font-size: 25px;
+    border: dashed purple;
+    display: inline-block;
+    margin: 10px;
+    width: 100px;
+    padding: 10px 5px;
+    text-align: center;
+}
+li:hover{
+    background-color: purple;
+    border: dashed yellow;
+}
+#div1{
+    background-color: blue;
+    width: 500px;
+    height: 500px;
+    font-size: 50px;
+    color: yellow;
+    text-align: center;
+}

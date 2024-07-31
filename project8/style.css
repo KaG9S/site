@@ -1,0 +1,25 @@
+#content{
+    background-color: rgb(222, 222, 222);
+    border: solid 2px black;
+    width: calc(fit-content + 10px);
+}
+#contenttext{
+    width: fit-content;
+    height: fit-content;
+    margin-top: 30px;
+    margin-left: 20px;
+    margin-bottom: 30px;
+}
+ul{
+    list-style-type: none;
+}
+.list{
+    list-style-type: disc;
+}
+.div{
+    list-style-type: none;
+}
+.hr{
+    background-color: black;
+    height: 2px;
+}

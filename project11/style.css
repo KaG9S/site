@@ -1,0 +1,18 @@
+marquee{
+    background-color: gray;
+}
+#m2{
+    background-color: blue;
+    float: left;
+}
+#m1{
+    background-color: yellow;
+    float: left;
+}
+.mm1{
+    width: 50%;
+}
+p{
+    font-size: 50px;
+    margin: 0;
+}

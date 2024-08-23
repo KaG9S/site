@@ -1,0 +1,44 @@
+html{
+    background-color: lightcoral;
+}
+p{
+    font-size: 50px;
+    font-family: cursive;
+    font-weight: bold;
+    color: firebrick;
+    background-color: whitesmoke;
+}
+table{
+    border: solid 10px black;
+    border-collapse: collapse;
+    width: 80%;
+    margin: auto;
+}
+th,td{
+    border: solid 2px black;
+    width: 20%;
+}
+tr{
+    height: 30px;
+}
+tr:nth-child(even){
+    background-color: gray;
+}
+tr:hover{
+    border: dashed black;
+    background-color: lightgrey;
+    font-size: 1.4em;
+}
+th:hover{
+    background-image: linear-gradient(to right,red,orange,yellow,green,blue,purple)
+}
+.c1{
+    color: red;
+    border: dashed blue;
+    text-align: right;
+    vertical-align: top;
+}
+caption{
+    font-size: 2em;
+    background-image: linear-gradient(to right,red,orange,yellow,green,blue,purple);
+}

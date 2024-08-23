@@ -1,0 +1,36 @@
+body{
+	background-color: aqua;
+}
+p{
+    font-size: 30px;
+}
+.p1{
+    font-family: 'Times New Roman', Times, serif;
+}
+.p2{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.p3{
+    font-family: 'Courier New', Courier, monospace;
+}
+.p4{
+    font-family: "Shantell Sans", cursive;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:
+    "BNCE" 0,
+    "INFM" 0,
+    "SPAC" 0;
+}
+.p5{
+    font-family: "Noto Sans Mono", monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+.p6{
+    font-style: italic;
+}
+.p7{
+    font-style: initial;
+}

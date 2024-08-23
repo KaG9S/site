@@ -1,0 +1,168 @@
+p{
+    background-color: powderblue;
+    font-size: 50px;
+    color: tan;
+    text-align: center;
+}
+div{
+    width: 200px;
+    height: 200px;
+    animation-iteration-count: infinite;
+    background-color: blueviolet;
+}
+.d1{
+    animation-name: an1;
+    animation-duration: 5s;
+}
+@keyframes an1{
+    from{background-color: red;}
+    to{background-color: yellow;}
+}
+.d2{
+    animation-name: an2;
+    animation-duration: 10s;
+}
+@keyframes an2{
+    0%{background-color: red;}
+    12.5%{background-color: orange;}
+    25%{background-color: yellow;}
+    37.5%{background-color: green;}
+    50%{background-color: lightblue;}
+    62.5%{background-color: blue;}
+    75%{background-color: darkmagenta;}
+    87.5%{background-color: magenta;}
+    100%{background-color: red;}
+}
+.d3{
+    animation-name: an3;
+    animation-duration: 5s;
+    animation-delay: 2s;
+}
+@keyframes an3{
+    0%{background-color:deeppink; Left: 0px; top: 0px; }
+    25%{background-color: Lightblue; left: 400px; top: 0px;}
+    50%{background-color:burlywood; left: 400px;top: 400px;}
+    75%{background-color: khaki; Left: 0px; top: 400px;}
+    100%{background-color:seagreen; left: 0px; top: 0px;}
+}
+.d4{
+    position: relative;
+    animation-name: an4;
+    animation-duration: 5s;
+    animation-delay: 2s;
+}
+@keyframes an4{
+    0%{
+        background-color:deeppink;
+        left: 0px; top: 0px;
+    }
+    25%{
+        background-color: Lightblue;
+        left: 400px; top: 0px;
+    }
+    50%{
+        background-color:burlywood;
+        left: 400px; top: 400px;
+    }
+    75%{
+        background-color: khaki;
+        left: 0px; top: 400px;
+    }
+    100%{
+        background-color:seagreen;
+        left: 0px; top: 0px;
+    }
+}
+.d5{
+    position: relative;
+    animation-name: an5;
+    animation-duration: 10s;
+}
+@keyframes an5{
+    0%{
+        left: 0px;
+        top: 0px;
+    }
+    10%{
+        left: 50px;
+        top: 0px;
+    }
+    20%{
+        left: 100px;
+        top: 0px;
+    }
+    30%{
+        left: 150px;
+        top: 0px;
+    }
+    40%{
+        left: 200px;
+        top: 0px;
+    }
+    50%{
+        left: 250px;
+        top: 0px;
+    }
+    60%{
+        left: 200px;
+        top: 0px;
+    }
+    70%{
+        left: 150px;
+        top: 0px;
+    }
+    80%{
+        left: 100px;
+        top: 0px;
+    }
+    90%{
+        left: 50px;
+        top: 0px;
+    }
+    100%{
+        left: 0px;
+        top: 0px;
+    }
+}
+#p1{
+    vertical-align: center;
+    background-color: #0000;
+}
+.d6{
+    position: relative;
+    height: 308px;
+    width: fit-content;
+    animation: 10s an6 infinite;
+    background-color: chocolate;
+    border: dashed 5px brown;
+    border-radius: 50%;
+}
+@keyframes an6{
+    0%{
+        left: 0%; top: 0px;
+        transform: rotate(0deg);
+    }
+    50%{
+        left: 75%; top: 0px;
+        transform: rotate(360deg);
+    }
+    100%{
+        left: 0%; top: 0px;
+        transform: rotate(0deg);
+    }
+}
+.d7{
+    background-image: linear-gradient(blue 50%, yellow 50% 100%);
+    background-clip: text;
+    background-color: transparent;
+    background-size: cover;
+    animation: 1s an7 infinite;
+    width: fit-content;
+    margin-left: 45%;
+}
+@keyframes an7{
+    0%{transform: scale(1);}
+    10%{transform: scale(1.5);}
+    20%{transform: scale(1);}
+    100%{transform: scale(1);}
+}

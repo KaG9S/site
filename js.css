@@ -1,7 +1,12 @@
 html{
     background-color: slategray;
+    font-family: "Shantell Sans", cursive;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-variation-settings: "BNCE" 0, "INFM" 0, "SPAC" 0;
 }
-header{
+#head{
     height: 200px;
     background-image: linear-gradient(blue, yellow);
     justify-content: center;
@@ -12,11 +17,6 @@ h1,h2{
     text-align: center;
 }
 h1,h2,p,.as{
-    font-family: "Shantell Sans", cursive;
-    font-optical-sizing: auto;
-    font-weight: bold;
-    font-style: normal;
-    font-variation-settings: "BNCE" 0, "INFM" 0, "SPAC" 0;
     width: fit-content;
 }
 .page{
@@ -57,6 +57,9 @@ h1,h2,p,.as{
 #main p{
     border: 5px dashed purple;
 }
+#projects{
+    width: 25%;
+}
 img{
     width: 25%;
     margin-left: 3%;
@@ -80,6 +83,9 @@ img{
         width: 100%;
     }
     #main{
+        width: 100%;
+    }
+    #projects{
         width: 100%;
     }
 }

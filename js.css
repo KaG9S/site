@@ -51,7 +51,7 @@ h1,h2,p,a{
     color: rgb(212, 0, 0);
 }
 #main{
-    width: 75%;
+    width: 50%;
     background-color: bisque;
 }
 #main p{
@@ -62,6 +62,10 @@ img{
     margin-left: 3%;
     margin-top: 10px;
     border: 10px white ridge;
+}
+#projects{
+    width: 25%;
+    background-color: bisque;
 }
 #foot{
     background-color: aquamarine;

@@ -10,8 +10,8 @@ html{
     font-weight: bold;
     font-style: normal;
     font-variation-settings:"BNCE" 0,"INFM" 0,"SPAC" 0;
-    background-color: blueviolet;
+    background-color: orangered;
     width: fit-content;
     border-radius: 10%;
-    border: 2px blue solid;
+    border: 2px black solid;
 }

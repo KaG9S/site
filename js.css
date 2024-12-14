@@ -1,0 +1,88 @@
+html{
+    background-color: slategray;
+}
+header{
+    height: 200px;
+    background-image: linear-gradient(blue, yellow);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+h1,h2{
+    text-align: center;
+}
+h1,h2,p,.as{
+    font-family: "Shantell Sans", cursive;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-variation-settings: "BNCE" 0, "INFM" 0, "SPAC" 0;
+    width: fit-content;
+}
+.page{
+    height: fit-content;
+    float: left;
+}
+#page{
+    background-color: burlywood;
+    width: 25%;
+}
+.as{
+    border: solid 3px black;
+    font-size: 20px;
+    text-decoration: none;
+    background-color: lightgray;
+    color: darkblue;
+    padding: 5px 5px;
+    display: inline-block;
+    width: 90%;
+    margin: 5px;
+    font-weight: bold;
+    box-shadow: 5px 5px rgba(128, 128, 128, .5);
+}
+.as:hover{
+    border: dashed 3px blue;
+    color: blue;
+    text-decoration: underline;
+    box-shadow: 0;
+}
+.as:active{
+    border: dashed 3px rgb(212, 0, 0);
+    color: rgb(212, 0, 0);
+}
+#main{
+    width: 50%;
+    background-color: bisque;
+}
+#main p{
+    border: 5px dashed purple;
+}
+img{
+    width: 25%;
+    margin-left: 3%;
+    margin-top: 10px;
+    border: 10px white ridge;
+}
+#foot{
+    background-color: aquamarine;
+    width: 100%;
+    height: fit-content;
+    clear: both;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+#foot a{
+    width: 300px;
+}
+@media screen and (width < 900px){
+    #page{
+        width: 100%;
+    }
+    #main{
+        width: 100%;
+    }
+    #projects{
+        width: 100%;
+    }
+}

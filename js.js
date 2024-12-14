@@ -9,11 +9,11 @@ document.write('<div id="page" class="page">\
     <a href="#as_tohtml" class="as" id="as_html">Про HTML</a>\
     <a href="#foot" class="as" id="as_pdown">Вниз</a>\
     <a href="index.html" class="as" id="as_js">Сайт HTML</a>\
+    <a href="index.html" class="as" id="as_js">Роботи JS</a>\
+    </div>\
     </div>')//page
 document.write('<div id="main" class="page">\
     </div>')//main
-document.write('<div id="projects" class="page">\
-    </div>')//projects
 document.write('<footer id="foot">\
     <h2>Контакти</h2>\
     <a href="tel:+380953513497"\

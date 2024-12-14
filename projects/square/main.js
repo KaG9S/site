@@ -4,16 +4,17 @@ function equation(){
     let c = parseFloat(document.getElementById('c').value)
     let D = b**2-4*a*c
     const DElement = document.getElementById('D')
+    const XElement = document.getElementById('x')
     DElement.innerText = ('D = '+D)
     if (D < 0){
-        DElement.innerText = 'Коренів немає!'
+        XElement.innerText = 'Коренів немає!'
     }else{
         let x1 = (-b+Math.sqrt(D))/(2*a)
         if (D > 0){
             let x2 = (-b-Math.sqrt(D))/(2*a)
-            DElement.innerText = ('Два корені: x1 = '+x1+', x2 = '+x2)
+            XElement.innerText = ('Два корені: x1 = '+x1+', x2 = '+x2)
         }else{
-            DElement.innerText = ('Один корінь: x = '+x1)
+            XElement.innerText = ('Один корінь: x = '+x1)
         }
     }
 }

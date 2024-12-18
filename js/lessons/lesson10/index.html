@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="math">
+        <script src="main.js"></script>
+        <div id="divfib">
+            <h1>Fibonachi!</h1>
+            <div><p>Значеня a:</p><input type="number" id="fiba" value="0"></div>
+            <div><p>Значеня b:</p><input type="number" id="fibb" value="1"></div>
+            <div><p>Значеня c:</p><input type="number" id="fibc" value="5"></div>
+            <button onclick="fibonachi()">Знайти</button>
+            <p id="fibp"></p>
+        </div>
+
+        <div id="divfact">
+            <h1>Factorial!</h1>
+            <div><p>Значеня:</p><input type="number" id="factn" value="5"></div>
+            <button onclick="factorial()">Знайти</button>
+            <p id="factorial"></p>
+        </div>
+
+        <div id="divcube">
+            <h2>Квадратне рівняння!</h2>
+            <div><p>Значеня a:</p><input type="number" id="cubea" value="1"></div>
+            <div><p>Значеня b:</p><input type="number" id="cubeb" value="2"></div>
+            <div><p>Значеня c:</p><input type="number" id="cubec" value="-3"></div>
+            <button onclick="CubeEquation()">Розв'язати</button>
+            <p id="cubeD"></p>
+            <p id="cubex"></p>
+        </div>
+
+        <div id="divpower">
+            <h2>Степінь</h2>
+            <div><p>Значеня a:</p><input type="number" id="powera" value="5"></div>
+            <div><p>Значеня n:</p><input type="number" id="powern" value="2"></div>
+            <button onclick="PowerEquation()">Знайти</button>
+            <p id="power"></p>
+        </div>
+    </div>
+</body>
+</html>

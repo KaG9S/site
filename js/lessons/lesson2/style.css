@@ -1,0 +1,10 @@
+#p1{
+    color: #000;
+    font-size: 50px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}

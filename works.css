@@ -1,0 +1,68 @@
+html{
+    background-color: slategray;
+    font-family: "Shantell Sans", cursive;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-variation-settings: "BNCE" 0, "INFM" 0, "SPAC" 0;
+}
+#head{
+    height: 200px;
+    background-image: linear-gradient(blue, yellow);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+h1,h2{
+    text-align: center;
+}
+h1,h2,p,a{
+    width: fit-content;
+}
+.page{
+    height: fit-content;
+    float: left;
+}
+#lessons{
+    background-color: burlywood;
+    width: 100%;
+}
+.as{
+    border: solid 3px black;
+    font-size: 20px;
+    text-decoration: none;
+    background-color: lightgray;
+    color: darkblue;
+    padding: 5px 5px;
+    display: inline-block;
+    width: 90%;
+    margin: 5px;
+    font-weight: bold;
+    box-shadow: 5px 5px rgba(128, 128, 128, .5);
+}
+.as:hover{
+    border: dashed 3px blue;
+    color: blue;
+    text-decoration: underline;
+    box-shadow: 0;
+}
+.as:active{
+    border: dashed 3px rgb(212, 0, 0);
+    color: rgb(212, 0, 0);
+}
+#projects{
+    width: 100%;
+    background-color: bisque;
+}
+#foot{
+    background-color: aquamarine;
+    width: 100%;
+    height: fit-content;
+    clear: both;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+#foot a{
+    width: 300px;
+}

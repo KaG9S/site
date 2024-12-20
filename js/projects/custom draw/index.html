@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Малювання!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="main">
+        <h1>Трикутники, кола, прямокутники!</h1>
+        <div>
+            <p>Введіть команду(help для довідки):</p>
+            <input type="text" id="command" placeholder="Enter command...">
+            <button onclick="myFunction()">Execute</button>
+            <div>
+                <h2>UI для полегшення малювання</h2>
+                <div>
+                    <p>Основні параметри</p>
+                    <label for="x1">x1:</label>
+                    <input id="x1" type="number" placeholder="x1">
+                    <label for="y1">y1:</label>
+                    <input id="y1" type="number" placeholder="y1">
+                    <label for="color">Color:</label>
+                    <input id="color" type="text" placeholder="color">
+                </div>
+                <div>
+                    <p>Прямокутник</p>
+                    <label for="width">Width:</label>
+                    <input id="width" type="number" placeholder="width">
+                    <label for="height">Height:</label>
+                    <input id="height" type="number" placeholder="height">
+                    <button onclick="custom('rect')">Прямокутник!</button>
+                </div>
+                <div>
+                    <p>Трикутник</p>
+                    <label for="x2">x2:</label>
+                    <input id="x2" type="number" placeholder="x2">
+                    <label for="y2">y2:</label>
+                    <input id="y2" type="number" placeholder="y2">
+                    <label for="x3">x3:</label>
+                    <input id="x3" type="number" placeholder="x3">
+                    <label for="y3">y3:</label>
+                    <input id="y3" type="number" placeholder="y3">
+                    <button onclick="custom('tri')">Трикутник!</button>
+                </div>
+                <div>
+                    <p>Коло</p>
+                    <label for="radius">Radius:</label>
+                    <input id="radius" type="number" placeholder="radius">
+                    <button onclick="custom('arc')">Коло!</button>
+                </div>
+                <div>
+                    <p>Стерти</p>
+                    <label for="clearx2">Width:</label>
+                    <input id="clearx2" type="number" placeholder="clearX2">
+                    <label for="cleary2">Height:</label>
+                    <input id="cleary2" type="number" placeholder="clearY2">
+                    <button onclick="custom('clear')">Стерти!</button>
+                </div>
+            </div>
+        </div>
+        <canvas width="800" height="800" id="myCanvas">Your browser doesn`t support Canvas HTML tag</canvas>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

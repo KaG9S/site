@@ -1,55 +1,51 @@
 const clock = document.getElementById('clockCanvas');
 const ctx = clock.getContext('2d');
-const height = clock.height / 2;
-const width = clock.width / 2;
-const radius = width / 2 - 50;
+const width = clock.width;
+const height = clock.height;
+const centerX = width / 2;
+const centerY = height / 2;
+const radius = centerX - 50;
 const PI = Math.PI;
 const PI2 = PI * 2;
 const oneMinute = PI / 30;
 const oneHour = PI / 6;
 const oneSecond = PI / 30;
+const quater = PI / 2;
 const date = new Date();
-function drawClock(){
-    ctx.clearRect(0, 0, clock.width, clock.height);
-    ctx.beginPath();
-    ctx.arc(width, height, radius, 0, PI2);
-    ctx.fillStyle = 'white';
-    ctx.fill();
-    ctx.lineWidth = 10;
-    ctx.strokeStyle = 'black';
-    ctx.stroke();
-    ctx.closePath();
+function drawDots(){
+    ctx.fillStyle="black";
     for(let i = 0; i < 12; i++){
-        ctx.beginPath();
-        ctx.arc(width + radius * Math.cos(i * oneHour - PI / 2), height + radius * Math.sin(i * oneHour - PI / 2), 5, 0, PI2);
-        ctx.fillStyle = 'black';
-        ctx.fill();
-        ctx.closePath();
+        let angle = i * oneHour
+        let x = centerX + Math.cos(angle) * radius
+        let y = centerY + Math.sin(angle) * radius
+        ctx.beginPath()
+        ctx.arc(x, y, 3, 0, PI2, false)
+        ctx.fill()
     }
-    const hours = date.getHours();
-    const minutes = date.getMinutes();
-    const seconds = date.getSeconds();
+}
+
+function drawHand(angle, length, width, color){
+    ctx.strokeStyle = color;
+    ctx.lineWidth = width;
+    ctx.lineCap = 'round';
     ctx.beginPath();
-    ctx.moveTo(width, height);
-    ctx.lineTo(width + radius * Math.cos((hours % 12) * oneHour - PI / 2) * 0.4, height + radius * Math.sin((hours % 12) * oneHour - PI / 2));
-    ctx.lineWidth = 10;
-    ctx.strokeStyle = 'black';
-    ctx.stroke();//hours
-    ctx.closePath();
-    ctx.beginPath();
-    ctx.moveTo(width, height);
-    ctx.lineTo(width + radius * Math.cos(minutes * oneMinute - PI / 2) * 0.6, height + radius * Math.sin(minutes * oneMinute - PI / 2));
-    ctx.lineWidth = 5;
-    ctx.strokeStyle = 'black';
-    ctx.stroke();//minutes
-    ctx.closePath();
-    ctx.beginPath();
-    ctx.moveTo(width, height);
-    ctx.lineTo(width + radius * Math.cos(seconds * oneSecond - PI / 2), height + radius * Math.sin(seconds * oneSecond - PI / 2));
-    ctx.lineWidth = 2;
-    ctx.strokeStyle = 'red';
-    ctx.stroke();//seconds
-    ctx.closePath();
-    requestAnimationFrame(drawClock);
+    ctx.moveTo(centerX, centerY);
+    ctx.lineTo(centerX + Math.cos(angle - quater) * length, centerY + Math.sin(angle - quater) * length);
+    ctx.stroke();
+}
+function drawHands(){
+    drawHand(oneHour * date.getHours() + oneMinute * date.getMinutes(), radius * 0.5, 10, 'black');//hours
+    drawHand(oneMinute * date.getMinutes(), radius * 0.75, 7.5, 'black');//minutes
+    drawHand(oneSecond * date.getSeconds(), radius, 5, 'red');//seconds    
+}
+function updateDate(){
+    date.setTime(Date.now());
+}
+function drawClock(){
+    ctx.clearRect(0, 0, width, height);
+    updateDate();
+    drawDots();
+    drawHands();
 }
 drawClock();
+setInterval(drawClock, 100);

@@ -53,4 +53,4 @@ function drawClock(){
 }
 
 drawClock();
-setInterval(drawClock, 1000);
+setInterval(drawClock, 100);

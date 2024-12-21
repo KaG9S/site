@@ -31,24 +31,24 @@ function drawClock(){
     const seconds = date.getSeconds();
     ctx.beginPath();
     ctx.moveTo(width, height);
-    ctx.lineTo(width + radius * Math.cos((hours % 12) * oneHour - PI / 2), height + radius * Math.sin((hours % 12) * oneHour - PI / 2));
+    ctx.lineTo(width + radius * Math.cos((hours % 12) * oneHour - PI / 2) * 0.4, height + radius * Math.sin((hours % 12) * oneHour - PI / 2));
     ctx.lineWidth = 10;
     ctx.strokeStyle = 'black';
-    ctx.stroke();
+    ctx.stroke();//hours
     ctx.closePath();
     ctx.beginPath();
     ctx.moveTo(width, height);
-    ctx.lineTo(width + radius * Math.cos(minutes * oneMinute - PI / 2), height + radius * Math.sin(minutes * oneMinute - PI / 2));
+    ctx.lineTo(width + radius * Math.cos(minutes * oneMinute - PI / 2) * 0.6, height + radius * Math.sin(minutes * oneMinute - PI / 2));
     ctx.lineWidth = 5;
     ctx.strokeStyle = 'black';
-    ctx.stroke();
+    ctx.stroke();//minutes
     ctx.closePath();
     ctx.beginPath();
     ctx.moveTo(width, height);
     ctx.lineTo(width + radius * Math.cos(seconds * oneSecond - PI / 2), height + radius * Math.sin(seconds * oneSecond - PI / 2));
     ctx.lineWidth = 2;
     ctx.strokeStyle = 'red';
-    ctx.stroke();
+    ctx.stroke();//seconds
     ctx.closePath();
     requestAnimationFrame(drawClock);
 }

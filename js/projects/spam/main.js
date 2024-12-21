@@ -5,9 +5,10 @@ const resultP = document.getElementById('resultP')
 function result(){
     const words = (checkbox.checked ? wordsEl.value : 'гарантія;безкоштовно;не спам;').split(';')
     let check = false
-    for(let i = 0; i < words.lenght; i++){
-        if(text.toLowerCase().indexOf(words[i])){
+    for(let i = 0; i < words.length; i++){
+        if(text.value.toLowerCase().indexOf(words[i].toLowerCase()) != -1){
             check = true
+            break
         }
     }
     if (checkbox.checked) {

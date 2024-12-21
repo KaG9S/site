@@ -1,0 +1,54 @@
+const clock = document.getElementById('clockCanvas');
+const ctx = clock.getContext('2d');
+const height = clock.height / 2;
+const width = clock.width / 2;
+const radius = width / 2 - 50;
+const PI = Math.PI;
+const PI2 = PI * 2;
+const oneMinute = PI / 30;
+const oneHour = PI / 6;
+const oneSecond = PI / 30;
+function drawClock(){
+    ctx.clearRect(0, 0, clock.width, clock.height);
+    ctx.beginPath();
+    ctx.arc(width, height, radius, 0, PI2);
+    ctx.fillStyle = 'white';
+    ctx.fill();
+    ctx.lineWidth = 10;
+    ctx.strokeStyle = 'black';
+    ctx.stroke();
+    ctx.closePath();
+    for(let i = 0; i < 12; i++){
+        ctx.beginPath();
+        ctx.arc(width + radius * Math.cos(i * oneHour - PI / 2), height + radius * Math.sin(i * oneHour - PI / 2), 20, 0, PI2);
+        ctx.fillStyle = 'black';
+        ctx.fill();
+        ctx.closePath();
+    }
+    const date = new Date();
+    const hours = date.getHours();
+    const minutes = date.getMinutes();
+    const seconds = date.getSeconds();
+    ctx.beginPath();
+    ctx.moveTo(width, height);
+    ctx.lineTo(width + radius * Math.cos((hours % 12) * oneHour - PI / 2), height + radius * Math.sin((hours % 12) * oneHour - PI / 2));
+    ctx.lineWidth = 10;
+    ctx.strokeStyle = 'black';
+    ctx.stroke();
+    ctx.closePath();
+    ctx.beginPath();
+    ctx.moveTo(width, height);
+    ctx.lineTo(width + radius * Math.cos(minutes * oneMinute - PI / 2), height + radius * Math.sin(minutes * oneMinute - PI / 2));
+    ctx.lineWidth = 5;
+    ctx.strokeStyle = 'black';
+    ctx.stroke();
+    ctx.closePath();
+    ctx.beginPath();
+    ctx.moveTo(width, height);
+    ctx.lineTo(width + radius * Math.cos(seconds * oneSecond - PI / 2), height + radius * Math.sin(seconds * oneSecond - PI / 2));
+    ctx.lineWidth = 2;
+    ctx.strokeStyle = 'red';
+    ctx.stroke();
+    ctx.closePath();
+    requestAnimationFrame(drawClock);
+}

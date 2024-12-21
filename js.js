@@ -8,6 +8,7 @@ const PI2 = PI * 2;
 const oneMinute = PI / 30;
 const oneHour = PI / 6;
 const oneSecond = PI / 30;
+const date = new Date();
 function drawClock(){
     ctx.clearRect(0, 0, clock.width, clock.height);
     ctx.beginPath();
@@ -20,12 +21,11 @@ function drawClock(){
     ctx.closePath();
     for(let i = 0; i < 12; i++){
         ctx.beginPath();
-        ctx.arc(width + radius * Math.cos(i * oneHour - PI / 2), height + radius * Math.sin(i * oneHour - PI / 2), 20, 0, PI2);
+        ctx.arc(width + radius * Math.cos(i * oneHour - PI / 2), height + radius * Math.sin(i * oneHour - PI / 2), 5, 0, PI2);
         ctx.fillStyle = 'black';
         ctx.fill();
         ctx.closePath();
     }
-    const date = new Date();
     const hours = date.getHours();
     const minutes = date.getMinutes();
     const seconds = date.getSeconds();

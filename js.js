@@ -11,7 +11,7 @@ const oneMinute = PI / 30;
 const oneHour = PI / 6;
 const oneSecond = PI / 30;
 const quater = PI / 2;
-const date = new Date();
+let date = new Date();
 function drawDots(){
     ctx.fillStyle="black";
     for(let i = 0; i < 12; i++){
@@ -39,7 +39,7 @@ function drawHands(){
     drawHand(oneSecond * date.getSeconds(), radius, 5, 'red');//seconds    
 }
 function updateDate(){
-    date.setTime(Date.now());
+    date = new Date();
 }
 function drawClock(){
     ctx.clearRect(0, 0, width, height);

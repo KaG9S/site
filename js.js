@@ -12,15 +12,16 @@ const oneHour = PI / 6;
 const oneSecond = PI / 30;
 const quater = PI / 2;
 let date = new Date();
+
 function drawDots(){
     ctx.fillStyle="black";
     for(let i = 0; i < 12; i++){
-        let angle = i * oneHour
-        let x = centerX + Math.cos(angle) * radius
-        let y = centerY + Math.sin(angle) * radius
-        ctx.beginPath()
-        ctx.arc(x, y, 3, 0, PI2, false)
-        ctx.fill()
+        let angle = i * oneHour;
+        let x = centerX + Math.cos(angle) * radius;
+        let y = centerY + Math.sin(angle) * radius;
+        ctx.beginPath();
+        ctx.arc(x, y, 3, 0, PI2, false);
+        ctx.fill();
     }
 }
 
@@ -30,22 +31,26 @@ function drawHand(angle, length, width, color){
     ctx.lineCap = 'round';
     ctx.beginPath();
     ctx.moveTo(centerX, centerY);
-    ctx.lineTo(centerX + Math.cos(angle - quater) * length, centerY + Math.sin(angle - quater) * length);
+    ctx.lineTo(centerX + Math.cos(angle) * length, centerY + Math.sin(angle) * length);
     ctx.stroke();
 }
+
 function drawHands(){
-    drawHand(oneHour * date.getHours() + oneMinute * date.getMinutes(), radius * 0.5, 10, 'black');//hours
-    drawHand(oneMinute * date.getMinutes(), radius * 0.75, 7.5, 'black');//minutes
-    drawHand(oneSecond * date.getSeconds(), radius, 5, 'red');//seconds    
+    drawHand(oneHour * date.getHours() + oneMinute * date.getMinutes(), radius * 0.5, 10, 'black'); // hours
+    drawHand(oneMinute * date.getMinutes(), radius * 0.75, 7.5, 'black'); // minutes
+    drawHand(oneSecond * date.getSeconds(), radius, 5, 'red'); // seconds
 }
+
 function updateDate(){
     date = new Date();
 }
+
 function drawClock(){
     ctx.clearRect(0, 0, width, height);
     updateDate();
     drawDots();
     drawHands();
 }
+
 drawClock();
-setInterval(drawClock, 100);
+setInterval(drawClock, 1000);

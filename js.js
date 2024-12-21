@@ -52,3 +52,4 @@ function drawClock(){
     ctx.closePath();
     requestAnimationFrame(drawClock);
 }
+drawClock();
